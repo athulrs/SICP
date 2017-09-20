@@ -1,0 +1,2 @@
+The program would work fine provided the (improve guess x) procedure is correctly defined.
+seperate procedure (define (improve guess x)) is to br defined.

@@ -1,0 +1,25 @@
+In Procedure good-enough fails for very small and large numbers.
+The procedure is defibned as
+ (define (good-enough? guess x)
+  (< (abs (- (square guess) x)) 0.001))
+The precision of the absolute guess value is set to be < 0.001.
+The answer is computed until it is close to the 0.001
+In very small numbers it becomes not possible.
+Eg: 0.0009
+
+In case of Very large numbers the Compution procedure for getting correct guess never ends always satisfies the condition < 0.001
+The guess will be re-generated for every case it program will never terminate.
+Eg: 96541237952556
+
+Change to procedure :
+
+(define (good-enough? guess prev) 
+              (< (abs (- (guess prev) guess)) 0.001))
+
+(define (sqrt-iter prev guess x)
+        (if (good-enough? guess prev) 
+	guess
+            (sqrt-iter guess(improve guess x) x)))
+
+(define (improve guess x) 
+	(average guess(/ x guess)))

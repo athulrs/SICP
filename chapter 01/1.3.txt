@@ -1,0 +1,6 @@
+(define (sq a b c)
+	(cond ((> a b) (cond (> b c) 
+				(+ (* a a)(* b b))))
+		((> a c) (cond (> c b)
+				(+ (* a a)(* c c))))
+		(else (+ (* b b)(* c c)))))
