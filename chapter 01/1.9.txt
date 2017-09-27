@@ -1,0 +1,21 @@
+(define (+ a b)
+  (if (= a 0)
+      b
+      (inc (+ (dec a) b))))
+This is procedure follows recursive behaviour.
+
+In (inc(+ dec a) b)),
+Until value of a is decreased to 0, the inc( ) recalls the procedure and is recurisvely executed.
+
+
+
+(define (+ a b)
+  (if (= a 0)
+      b
+      (+ (dec a) (inc b))))
+
+This follows iterative procedure.
+The value of a and b changes for all procedures
+ (+ (dec a) (inc b)) is redefined for every step.
+untill value of a is 0
+The value of b increses.

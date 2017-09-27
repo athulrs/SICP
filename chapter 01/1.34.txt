@@ -1,0 +1,4 @@
+The procedure first add value f to 2 
+then changes value to replace f again with 2
+procedure becomes 
+(f f) -> (2 2) which raises an error

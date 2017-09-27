@@ -1,0 +1,15 @@
+Recursive:
+
+(define (func n)
+	(if (< n 3)
+	n
+	(+ (func(- n 1)) (* 2(func (- n 2))) (* 3(func (- n 3)))))
+
+Iterative:
+
+(define (func n)
+	(define (iter_func a b c count)
+		(if (= count 0)
+		a
+		(iter_func b c (+ c (* 2 b) (* 3 a)) (- count 1))))
+	(iter_func 0 1 2 n))			
